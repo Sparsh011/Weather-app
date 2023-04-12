@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/tv_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Delhi's weather"
+        android:fontFamily="@font/lato"
+        android:textSize="@dimen/_16sdp"
+        android:layout_margin="@dimen/_13sdp"
+        android:padding="@dimen/_5sdp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_current_city_weather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_heading"
+        android:padding="@dimen/_10sdp"
+        android:layout_margin="@dimen/_15sdp"
+        android:textSize="@dimen/_25sdp"
+        android:fontFamily="@font/lato"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:textColor="@color/grey_btn_get_weather_by_city_name"
+        android:visibility="gone"
+        />
+
+
+    <ProgressBar
+        android:id="@+id/pb_current_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_heading"
+        app:layout_constraintStart_toStartOf="@id/tv_heading"
+        app:layout_constraintEnd_toEndOf="@id/tv_heading"
+        android:visibility="gone"
+        android:layout_margin="@dimen/_15sdp"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
