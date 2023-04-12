@@ -16,6 +16,6 @@ class ApiService {
 
 
     suspend fun getWeather(lat: Double, long : Double): Response<OpenWeatherApiDataClass> {
-        return api.getWeather(lat, long, "25bfdcbc3980c901a4c75d4b6656426b")
+        return api.getWeather(lat, long, "hehe")
     }
 }
