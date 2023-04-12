@@ -17,8 +17,47 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="#FAF6F6"
-        android:textColorHint="#53565C"
+        android:textColorHint="@color/grey_btn_get_weather_by_city_name"
         android:textColor="@color/black"
         android:hint="Enter City Name"/>
+
+    <Button
+        android:id="@+id/btn_get_weather_city_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Weather"
+        app:layout_constraintTop_toBottomOf="@+id/et_city_name"
+        app:layout_constraintStart_toStartOf="@+id/et_city_name"
+        app:layout_constraintEnd_toEndOf="@+id/et_city_name"
+        android:layout_margin="@dimen/_15sdp"
+        android:padding="@dimen/_10sdp"
+        android:backgroundTint="@color/grey_btn_get_weather_by_city_name"
+        android:fontFamily="@font/lato"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Temperate is"
+        app:layout_constraintTop_toBottomOf="@+id/btn_get_weather_city_name"
+        app:layout_constraintStart_toStartOf="@id/btn_get_weather_city_name"
+        app:layout_constraintEnd_toEndOf="@id/btn_get_weather_city_name"
+        android:textColor="@color/black"
+        android:layout_margin="@dimen/_25sdp"
+        android:gravity="center"
+        android:visibility="gone"
+        />
+
+    <ProgressBar
+        android:id="@+id/pb_load_custom_city_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btn_get_weather_city_name"
+        app:layout_constraintEnd_toEndOf="@+id/btn_get_weather_city_name"
+        app:layout_constraintStart_toStartOf="@+id/btn_get_weather_city_name"
+        android:layout_margin="@dimen/_25sdp"
+        android:visibility="gone"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
