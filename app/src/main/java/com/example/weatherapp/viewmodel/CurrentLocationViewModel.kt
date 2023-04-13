@@ -12,7 +12,7 @@ import com.example.weatherapp.model.api.ApiService
 import com.example.weatherapp.model.api.OpenWeatherApiDataClass
 import kotlinx.coroutines.launch
 
-class CurrentLocationViewModel : ViewModel() {
+class CurrentLocationViewModel() : ViewModel() {
     private val TAG = "CurrentLocationViewModel"
     private val apiService = ApiService()
     val currentWeatherResponse = MutableLiveData<OpenWeatherApiDataClass>()
@@ -21,7 +21,8 @@ class CurrentLocationViewModel : ViewModel() {
         if (hasNetwork(context)){
             viewModelScope.launch {
                 currentWeatherResponse.value = apiService.getWeather(28.7041, 77.1025).body()
-                Log.d(TAG, "getCurrentWeather: ${currentWeatherResponse.value?.main?.toString()}")
+//                Make use of Resource class.
+                Log.d(TAG, "getCurrentWeatherrr: ${currentWeatherResponse.value?.main?.toString()}")
             }
         }
         else{
