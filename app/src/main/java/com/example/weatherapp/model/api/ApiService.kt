@@ -16,6 +16,10 @@ class ApiService {
 
 
     suspend fun getWeather(lat: Double, long : Double): Response<OpenWeatherApiDataClass> {
-        return api.getWeather(lat, long, "hehe")
+        return api.getWeather(lat, long, "25bfdcbc3980c901a4c75d4b6656426b")
+    }
+
+    suspend fun getCoordinates(cityName: String) : Response<SearchLocationResultDataClass>{
+        return api.getCoordinates(cityName, "25bfdcbc3980c901a4c75d4b6656426b")
     }
 }

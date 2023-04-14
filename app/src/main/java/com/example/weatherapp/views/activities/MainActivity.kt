@@ -11,8 +11,8 @@ import com.example.weatherapp.R
 import com.example.weatherapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private var activityMainBinding : ActivityMainBinding? = null
-    private lateinit var mNavController : NavController
+    private var activityMainBinding: ActivityMainBinding? = null
+    private lateinit var mNavController: NavController
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

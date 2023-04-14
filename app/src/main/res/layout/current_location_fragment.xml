@@ -46,9 +46,22 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_heading"
         app:layout_constraintStart_toStartOf="@id/tv_heading"
         app:layout_constraintEnd_toEndOf="@id/tv_heading"
-        android:visibility="gone"
         android:layout_margin="@dimen/_15sdp"
         />
+
+    <TextView
+        android:id="@+id/tv_emoji"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/pb_current_location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Hello ji"
+        android:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="invisible"
+        android:gravity="center"/>
+
 
 
 

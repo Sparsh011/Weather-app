@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="2"
+    android:orientation="vertical"
+    tools:context=".views.activities.GetUserLocation">
+
+    <TextView
+        android:id="@+id/tv_header_for_getting_loc"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_230sdp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        android:padding="@dimen/_60sdp"
+        android:text="Hang On!\nGetting Your Location..."
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.321" />
+
+    <ProgressBar
+        android:id="@+id/pb_getting_location"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="@dimen/_40sdp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_header_for_getting_loc"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
