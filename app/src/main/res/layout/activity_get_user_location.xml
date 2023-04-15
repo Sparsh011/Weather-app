@@ -6,34 +6,33 @@
     android:layout_height="match_parent"
     android:weightSum="2"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".views.activities.GetUserLocation">
 
     <TextView
-        android:id="@+id/tv_header_for_getting_loc"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_230sdp"
-        android:autoSizeTextType="uniform"
-        android:fontFamily="@font/lato"
+        android:layout_height="wrap_content"
+        android:text="Getting Your Location..."
         android:gravity="center"
-        android:padding="@dimen/_60sdp"
-        android:text="Hang On!\nGetting Your Location..."
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.321" />
+        app:layout_constraintBottom_toTopOf="@+id/videoView"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="italic"
+        />
 
-    <ProgressBar
-        android:id="@+id/pb_getting_location"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_60sdp"
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_300sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="@dimen/_40sdp"
-        app:layout_constraintTop_toBottomOf="@+id/tv_header_for_getting_loc"
-        />
+        android:background="@android:color/transparent"/>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

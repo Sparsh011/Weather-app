@@ -2,11 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/navigation_current_location"
-        android:icon="@drawable/ic_launcher_background"
-        android:title="Current Location" />
+        android:icon="@drawable/baseline_location_on_24"
+        android:title="Your Location" />
 
     <item
         android:id="@+id/navigation_search_location"
-        android:icon="@drawable/ic_launcher_background"
-        android:title="Search Location" />
+        android:icon="@drawable/baseline_search_24"
+        android:title="Search" />
 </menu>

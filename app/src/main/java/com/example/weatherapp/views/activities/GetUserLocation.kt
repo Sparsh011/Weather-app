@@ -8,9 +8,11 @@ import android.content.pm.PackageManager
 import android.location.Address
 import android.location.Geocoder
 import android.location.LocationManager
+import android.net.Uri
 import android.os.Bundle
 import android.os.Looper
 import android.widget.Toast
+import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.example.weatherapp.R
@@ -29,10 +31,19 @@ class GetUserLocation : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_get_user_location)
 
+        supportActionBar?.hide()
+
         locationRequest = LocationRequest.create();
         locationRequest!!.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
         locationRequest!!.setInterval(5000);
         locationRequest!!.setFastestInterval(2000);
+
+        val gettingLocationAnimation = findViewById<VideoView>(R.id.videoView)
+        gettingLocationAnimation.setVideoURI(Uri.parse("android.resource://" + packageName + "/" + R.raw.getting_location))
+        gettingLocationAnimation.setOnPreparedListener { mp -> mp.isLooping = true }
+        gettingLocationAnimation.start()
+
+
 
         getCurrentLocation()
     }
@@ -101,6 +112,7 @@ class GetUserLocation : AppCompatActivity() {
                                     Variables.STATE_NAME = stateName
                                     Variables.COUNTRY_NAME = countryName
 
+                                    finish()
                                     startActivity(Intent(this@GetUserLocation, MainActivity::class.java))
                                 }
                             }

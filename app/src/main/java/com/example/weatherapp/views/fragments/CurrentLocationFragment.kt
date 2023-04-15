@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.weatherapp.R
@@ -18,6 +19,11 @@ class CurrentLocationFragment : Fragment(R.layout.current_location_fragment) {
     private var currentLocationViewModel: CurrentLocationViewModel? = null
     private val TAG = "CurrentLocationFragment"
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
+    }
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         currentLocationFragmentBinding = CurrentLocationFragmentBinding.inflate(inflater, container, false)
@@ -29,11 +35,9 @@ class CurrentLocationFragment : Fragment(R.layout.current_location_fragment) {
 
         currentLocationViewModel = ViewModelProvider(this)[CurrentLocationViewModel::class.java]
 
-
         context?.let {
             currentLocationViewModel?.getCurrentWeather(it)
         }
-
 
         viewModelObserver()
     }
